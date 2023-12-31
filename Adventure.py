@@ -6,13 +6,52 @@ class StoryData:
     best_friend_name = "Jimothy the Fourth"
     what_are_we_fighting = None
 
+class StoryNode:
+    intro_text = None
+    options = []
+
+    previous_node = None
+    next_node = None
+
+    def print_options(self):
+        for index, option in enumerate(self.options):
+            print(index, "|", option)
+
 
 def print_options(options):
     for option in options:
         print(option)
 
+def get_input():
+    user_input = input("What do you choose: ")
+    print("=======================================================")
+    return user_input
+
+def standard_function(story_data):
+    # Intro text
+    intro_text = None
+    print(intro_text)
+
+    # Options
+    options = []
+
+    # Print options
+    print_options(options)
+
+    # Get user input
+    user_input = get_input()
+    user_input("What do you choose")
+
+    # Handle each input option
+    if user_input == "0":
+        function_1()
+    if user_input == "1":
+        function_2()
+    if user_input == "2":
+        function_3()
 
 def forget_about_jimothy(story_data):
+
     pass
 
 
