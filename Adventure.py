@@ -13,14 +13,31 @@ def print_options(options):
 
 
 def forget_about_jimothy(story_data):
-    pass
+    print("You arrive safely at your home planet. As you're relaxing, you hear a knock on your door as Jimothy "
+          "has come to take revenge. He executes you. Better luck next time :)")
 
 
 def send_out_rescue_ship_to_jimothy(story_data):
-    pass
+    print("You arrive safely at your home planet and Jimothy is waiting for you. He thanks you and gives you "
+          "a hefty reward for saving him from the", story_data.what_are_we_fighting)
 
 
 def damaged_life_support(story_data):
+    options = ["0: Manually repair them",
+               "1: Send repair bot",
+               "2: Ignore it"]
+    print_options(options)
+    user_input = input("What do you do?")
+    if user_input == "0":
+        print("You grab a wrench and successfully repair your life support systems. You blast into hyperspace and "
+              "arrive safely at your home planet.")
+    if user_input == "1":
+        print("You send the repair bot but it malfunctions. Your life support systems fail and you suffocate. "
+              "GG thanks for playing :)")
+    if user_input == "2":
+        print("You ignore your failing life support systems. Just as you are about to blast off, clouds of toxic"
+              " smoke envelops the ship and you die a painful death from suffocation. GG, shouldn't ignore failing"
+              " life support systems :)")
     pass
 
 
@@ -40,7 +57,7 @@ def start_engines_and_fly_out(story_data):
     if user_input == "0":
         print("You quickly activate the hyperjump engines and within seconds you emerge right in front of the",
               story_data.what_are_we_fighting, ", it destroys your ship and you perish")
-        print("RIP the end. THank you again for playing")
+        print("RIP the end. Thank you again for playing")
     if user_input == "1":
         print("You decide it's in your best interest to forget about", story_data.best_friend_name,
               "and continue your journey through space.")
